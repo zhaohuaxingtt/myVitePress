@@ -9,10 +9,10 @@ VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shi
 **Input**
 
 ````md
-```js{4}
+```js
 export default {
   data () {
-    return {
+    return { 
       msg: 'Highlighted!'
     }
   }
@@ -22,7 +22,7 @@ export default {
 
 **Output**
 
-```js{4}
+```js
 export default {
   data () {
     return {
@@ -83,3 +83,32 @@ This is a details block.
 ## More
 
 Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+
+# 使用自定义锚点 {## Syntax Highlighting}
+---
+title: Blogging Like a Hacker
+lang: en-US
+---
+
+## 贡献者
+
+vitepress的markdown语法支持vue
+<script setup>
+import {VPTeamMembers} from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://www.github.com/antfu.png',
+    name: 'Anthony Fu',
+    title: 'Creator',
+    links: [
+      {icon: 'github', link: 'https://github.com/antfu'},
+      {icon: 'twitter', link: 'https://twitter.com/antfu7'}
+    ]
+  }
+]
+</script>
+<VPTeamMembers  :members="members" />
+
+
+
